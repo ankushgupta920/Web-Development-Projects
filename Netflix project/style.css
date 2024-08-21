@@ -1,0 +1,259 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7) , rgba(0,0,0,0.7)) , url(netflix-img/images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 18px 0;
+    /* border: 2px yellow solid; */
+}
+.left{
+    /* border: 2px green solid; */
+    margin-left: 20%;
+    padding: 10px 0;
+}
+.right{
+    margin-right: 20%;
+    padding: 10px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+nav button{
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 0;
+    outline: 0;
+    margin-left: 10px;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.language-btn{
+    display: inline-flex;   
+    align-items: center;
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 10px;
+}
+
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+
+.header-contant{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    font-family: 'Poppins' , sans-serif;
+    font-weight: bolder;
+}
+.header-contant h1{
+    font-size: 63px;
+    line-height: 70px;
+    max-width: 650px;
+    font-weight: bolder;
+}
+.header-contant h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight:500;
+}
+.header-contant p{
+    font-weight: lighter;
+}
+.email-singup{
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center; 
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.email-singup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+.email-singup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px ;
+}
+
+.features{
+    /* border: solid 2px white; */
+    padding: 50px 12%;
+    font-size: 22px;
+    font-family: 'Poppins' , sans-serif;
+    font-weight: bolder;
+}
+.row{
+    /* border: solid 2px white; */
+    display: flex;
+    align-items: center; 
+    width: 100%;
+    padding: 50px 0px;
+}
+.textcol h2{
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.faq{
+    /* border: solid 2px white; */
+    padding: 10px 12%;
+    text-align: center;
+    font-family: 'Poppins' , sans-serif;
+}
+.faq h2{
+    font-weight: 500;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.accordion{
+    /* border: solid 2px white; */
+    margin: 60px auto;
+    /* width: 100%; */
+    max-width: 750px;
+}
+
+.accordion li{
+    /* border: solid 2px white; */
+    list-style: none;
+    padding: 5px;
+    
+}
+
+.accordion li label{
+    /* border: solid 2px rgb(207, 10, 10); */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500; 
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 35px;
+    transition: transform 0.5s;
+
+}
+input[type = "radio"]{
+    display: none;
+}
+
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px; 
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s , padding 0.5s;
+}
+
+.accordion input[type = "radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type = "radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+.faq .email-singup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small{
+    font-size: 13px;
+}
+.footer{
+    /* border: solid 2px rgb(207, 10, 10); */
+    padding: 50px 15% 10px;
+    border-top: solid 6px #333;
+    color: #777;
+
+}
+.footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family: 'Poppins' , sans-serif;
+}
+.footer .col{
+    flex-basis: 25%;
+    /* flex-grow: 1; */
+    margin-bottom: 20px;
+
+}   
+.footer .col a{
+    /* display: block; */
+    display: flex;
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.copyright-txt{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Poppins' , sans-serif;
+}
+
+
+/* -----------------media- queries-for-small-screen-------------------- */
+/* @media only screen and (max-width: 600px){
+    .logo{
+        width: 100px;
+    }
+} */
